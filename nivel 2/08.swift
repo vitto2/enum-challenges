@@ -6,11 +6,11 @@ enum ProductDetailState {
   case loaded
   case error
 
-  func shouldShowActivityIndicator() -> Bool {
+  var shouldShowActivityIndicator: Bool {
     switch self {
       case .loading:
         return true
-      case .loaded, .false: 
+      case .loaded, .error: 
         return false
     }
   }
